@@ -19,6 +19,7 @@ body {
   color: #e4e4e4;
 }
 
+/* ---------------- Navbar ---------------- */
 .navbar {
   position: fixed;
   top: 0;
@@ -62,6 +63,7 @@ body {
   cursor: pointer;
 }
 
+/* ---------------- Hero Section ---------------- */
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
@@ -90,6 +92,7 @@ body {
 }
 .btn:hover { background: #ffd633; }
 
+/* ---------------- Sections ---------------- */
 section {
   padding: 5rem 2rem;
   max-width: 1000px;
@@ -103,6 +106,7 @@ h2 {
   font-size: 2rem;
 }
 
+/* ---------------- Skills ---------------- */
 .skills-grid {
   display: flex;
   gap: 2rem;
@@ -121,6 +125,7 @@ h2 {
 .card:hover { transform: translateY(-5px); }
 .dark .card { background: #1e1e1e; }
 
+/* ---------------- Projects ---------------- */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -138,10 +143,169 @@ h2 {
 .project-info { padding: 1rem; }
 .dark .project-card { background: #1e1e1e; }
 
+/* ---------------- Footer ---------------- */
 footer {
   background: #007bff;
   color: white;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+/* ---------------- Responsive Design ---------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #007bff;
+    display: none;
+    margin-top: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  #menuToggle {
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  #darkToggle {
+    margin-left: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Hide menu button on desktop */
+#menuToggle {
+  display: none;
+}
+/* ---------------- Responsive Design ---------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  /* Menu toggle button */
+  #menuToggle {
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Nav links container (hidden by default) */
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #007bff;
+    overflow: hidden;
+    max-height: 0;              /* hidden by default */
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  /* When menu is active */
+  .nav-links.show {
+    max-height: 300px;          /* slide-down effect */
+  }
+
+  .nav-links a {
+    padding: 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  #darkToggle {
+    margin-left: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Hide the menu toggle on desktop */
+#menuToggle {
+  display: none;
+}
+
+/* ---------------- Responsive Design ---------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  /* Menu toggle button */
+  #menuToggle {
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Nav links container (hidden by default) */
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #007bff;
+    display: none;              /* hidden by default */
+  }
+
+  /* When menu is active */
+  .nav-links.show {
+    display: flex;              /* slide-down effect */
+  }
+
+  .nav-links a {
+    padding: 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  #darkToggle {
+    margin-left: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Hide the menu toggle on desktop */
+#menuToggle {
+  display: none;
 }
